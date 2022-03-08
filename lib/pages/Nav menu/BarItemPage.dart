@@ -1,3 +1,5 @@
+// ignore_for_file: file_names, avoid_unnecessary_containers
+
 import 'package:flutter/cupertino.dart';
 
 class BarPage extends StatefulWidget {

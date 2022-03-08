@@ -2,8 +2,11 @@
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
 import 'package:modern_design_app/Widgets/TextMainBold.dart';
 import 'package:modern_design_app/Widgets/TextSecondary.dart';
+import 'package:modern_design_app/pages/Nav%20menu/MainPage.dart';
 
 class WelcomePage extends StatefulWidget {
   const WelcomePage({Key? key}) : super(key: key);
@@ -47,15 +50,21 @@ class _WelcomePageState extends State<WelcomePage> {
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        TextMainBold(
-                          text: text[index],
-                          size: 40,
-                          color: Colors.cyan,
+                        Container(
+                          width: 250,
+                          child: TextMainBold(
+                            text: text[index],
+                            size: 40,
+                            color: Colors.cyan,
+                          ),
                         ),
-                        TextSecondary(
-                          text: secondaryText[index],
-                          size: 30,
-                          color: Colors.indigo,
+                        Container(
+                          width: 300,
+                          child: TextSecondary(
+                            text: secondaryText[index],
+                            size: 30,
+                            color: Colors.indigo,
+                          ),
                         ),
                         const SizedBox(
                           height: 22,
@@ -78,7 +87,9 @@ class _WelcomePageState extends State<WelcomePage> {
                                   RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(18.0),
                           ))),
-                          onPressed: () {},
+                          onPressed: () {
+                            Get.to(() => MainPage());
+                          },
                           child: Icon(Icons.arrow_forward),
                         )
                       ],

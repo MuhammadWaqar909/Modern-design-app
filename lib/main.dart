@@ -1,5 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:get/get_navigation/src/root/get_material_app.dart';
+import 'package:modern_design_app/Cubit/app_cubit_states.dart';
+import 'package:modern_design_app/Cubit/app_cubits.dart';
+import 'package:modern_design_app/pages/HomePage.dart';
+import 'package:modern_design_app/pages/Test.dart';
+import 'Cubit/app_cubits_logics.dart';
+import 'package:modern_design_app/pages/Nav%20menu/DetailPage.dart';
 import 'package:modern_design_app/pages/Nav%20menu/MainPage.dart';
+// ignore: unused_import
 import 'package:modern_design_app/pages/Welcome_Page.dart';
 
 void main() {
@@ -12,7 +21,7 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
@@ -26,9 +35,14 @@ class MyApp extends StatelessWidget {
         // Notice that the counter didn't reset back to zero; the application
         // is not restarted.
         primarySwatch: Colors.deepPurple,
+        // ignore: prefer_const_constructors
         iconTheme: IconThemeData(color: Colors.black),
       ),
-      home: const MainPage(),
+      home: TestPage(),
+      // home: BlocProvider<AppCubits>(
+      //   create: (context) => AppCubits(InitialState),
+      //   child: AppCubitLogics(),
+      // ),
     );
   }
 }

@@ -3,7 +3,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:modern_design_app/pages/Nav%20menu/BarItemPage.dart';
-import 'package:modern_design_app/pages/Nav%20menu/HomePage.dart';
+import 'package:modern_design_app/pages/HomePage.dart';
 import 'package:modern_design_app/pages/Nav%20menu/MyPage.dart';
 import 'package:modern_design_app/pages/Nav%20menu/SearchPage.dart';
 
